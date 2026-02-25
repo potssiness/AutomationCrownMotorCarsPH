@@ -6,3 +6,4 @@ Resource   ../resources/crownMotorsAdmin.resource
 Resource   ../keywords/customKeywords.resource
 Resource   ../keywords/crownMotorsAdminKeywords.resource
 Resource   ../keywords/crownMotorsCustomer.resource
+Resource   ../configs/browser.robot
