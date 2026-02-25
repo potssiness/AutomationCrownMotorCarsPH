@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    libraries.resource
+Resource   libraries.resource
 Resource   ../resources/variables.robot
 Resource   ../resources/crownMotorsCustomer.resource
 Resource   ../resources/crownMotorsAdmin.resource

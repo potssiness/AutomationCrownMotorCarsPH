@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/settingsAndResource.resource
+Resource    ../configs/settingsAndResource.resource
 
 *** Keywords ***
 Open Browser To Admin Page
