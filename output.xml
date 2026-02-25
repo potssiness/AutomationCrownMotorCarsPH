@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-25T23:45:47.952613" rpa="false" schemaversion="5">
+<suite id="s1" name="SAMPLE" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\customer\SAMPLE.robot">
+<test id="s1-t1" name="Sample Test Case" line="6">
+<kw name="Open Browser Session" owner="browser">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Normal Browser" owner="browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-25T23:45:48.146867" level="INFO">Opening browser 'Chrome' to base url 'https://stage.crownmotorcarsph.com/'.</msg>
+<msg time="2026-02-25T23:45:48.161021" level="DEBUG">Selenium Manager binary found at: C:\Users\mcapote\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
+<msg time="2026-02-25T23:45:48.161164" level="DEBUG">Executing process: C:\Users\mcapote\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
+<msg time="2026-02-25T23:45:48.324918" level="DEBUG">chromedriver not found in PATH</msg>
+<msg time="2026-02-25T23:45:48.325003" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2026-02-25T23:45:48.325039" level="DEBUG">Detected browser: chrome 145.0.7632.116</msg>
+<msg time="2026-02-25T23:45:48.325067" level="DEBUG">Required driver: chromedriver 145.0.7632.117</msg>
+<msg time="2026-02-25T23:45:48.325092" level="DEBUG">chromedriver 145.0.7632.117 already in the cache</msg>
+<msg time="2026-02-25T23:45:48.325115" level="DEBUG">Driver path: C:\Users\mcapote\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe</msg>
+<msg time="2026-02-25T23:45:48.325138" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
+<msg time="2026-02-25T23:45:48.392833" level="DEBUG">Started executable: `C:\Users\mcapote\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe` in a child process with pid: 26668 using 0 to output -3</msg>
+<msg time="2026-02-25T23:45:48.940914" level="DEBUG">POST http://localhost:56927/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
+<msg time="2026-02-25T23:45:48.941313" level="DEBUG">Starting new HTTP connection (1): localhost:56927</msg>
+<msg time="2026-02-25T23:45:50.012625" level="DEBUG">http://localhost:56927 "POST /session HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:50.012755" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.116","chrome":{"chromedriverVersion":"145.0.7632.117 (de4e5d6e13b995f5e04137970c0e8ec456017467-refs/branch-heads/7632@{#3101})","userDataDir":"C:\\Users\\mcapote\\AppData\\Local\\Temp\\scoped_dir26668_723670302"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:51327"},"goog:processID":23636,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"64ecab0ead27743643ff7cb169dcf3a2"}} | headers=HTTPHeaderDict({'Content-Length': '908', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:50.012822" level="DEBUG">Finished Request</msg>
+<msg time="2026-02-25T23:45:50.012948" level="DEBUG">POST http://localhost:56927/session/64ecab0ead27743643ff7cb169dcf3a2/timeouts {'script': 5000}</msg>
+<msg time="2026-02-25T23:45:50.013787" level="DEBUG">http://localhost:56927 "POST /session/64ecab0ead27743643ff7cb169dcf3a2/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:50.013865" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:50.013913" level="DEBUG">Finished Request</msg>
+<msg time="2026-02-25T23:45:50.013984" level="DEBUG">POST http://localhost:56927/session/64ecab0ead27743643ff7cb169dcf3a2/timeouts {'implicit': 0}</msg>
+<msg time="2026-02-25T23:45:50.014948" level="DEBUG">http://localhost:56927 "POST /session/64ecab0ead27743643ff7cb169dcf3a2/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:50.015034" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:50.015088" level="DEBUG">Finished Request</msg>
+<msg time="2026-02-25T23:45:50.015165" level="DEBUG">POST http://localhost:56927/session/64ecab0ead27743643ff7cb169dcf3a2/timeouts {'pageLoad': 300000}</msg>
+<msg time="2026-02-25T23:45:50.015889" level="DEBUG">http://localhost:56927 "POST /session/64ecab0ead27743643ff7cb169dcf3a2/timeouts HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:50.015961" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:50.016009" level="DEBUG">Finished Request</msg>
+<msg time="2026-02-25T23:45:50.016083" level="DEBUG">POST http://localhost:56927/session/64ecab0ead27743643ff7cb169dcf3a2/url {'url': 'https://stage.crownmotorcarsph.com/'}</msg>
+<msg time="2026-02-25T23:45:52.339875" level="DEBUG">http://localhost:56927 "POST /session/64ecab0ead27743643ff7cb169dcf3a2/url HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:52.340052" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:52.340130" level="DEBUG">Finished Request</msg>
+<msg time="2026-02-25T23:45:52.340183" level="DEBUG">Opened browser with session id 64ecab0ead27743643ff7cb169dcf3a2.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-25T23:45:48.146710" elapsed="4.193556"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<msg time="2026-02-25T23:45:52.340701" level="DEBUG">POST http://localhost:56927/session/64ecab0ead27743643ff7cb169dcf3a2/window/maximize {}</msg>
+<msg time="2026-02-25T23:45:52.374055" level="DEBUG">http://localhost:56927 "POST /session/64ecab0ead27743643ff7cb169dcf3a2/window/maximize HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:52.374259" level="DEBUG">Remote response: status=200 | data={"value":{"height":832,"width":1552,"x":-7,"y":-7}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:52.374355" level="DEBUG">Finished Request</msg>
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-25T23:45:52.340538" elapsed="0.033933"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2026-02-25T23:45:48.146490" elapsed="4.228160"/>
+</kw>
+<arg>'${HEADLESS}'=='True'</arg>
+<arg>Open Headless Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Normal Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-25T23:45:48.146060" elapsed="4.228682"/>
+</kw>
+<arg>${CUSTOMER_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2026-02-25T23:45:48.145516" elapsed="4.229342"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<msg time="2026-02-25T23:45:52.375933" level="DEBUG">Closing browser with session id 64ecab0ead27743643ff7cb169dcf3a2.</msg>
+<msg time="2026-02-25T23:45:52.376148" level="DEBUG">DELETE http://localhost:56927/session/64ecab0ead27743643ff7cb169dcf3a2 {}</msg>
+<msg time="2026-02-25T23:45:52.433799" level="DEBUG">http://localhost:56927 "DELETE /session/64ecab0ead27743643ff7cb169dcf3a2 HTTP/1.1" 200 0</msg>
+<msg time="2026-02-25T23:45:52.434032" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
+<msg time="2026-02-25T23:45:52.434157" level="DEBUG">Finished Request</msg>
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-25T23:45:52.375562" elapsed="2.191022"/>
+</kw>
+<doc>https://carldagangon00.atlassian.net/browse/SCRUM-6</doc>
+<status status="PASS" start="2026-02-25T23:45:48.144755" elapsed="6.422243"/>
+</test>
+<status status="PASS" start="2026-02-25T23:45:47.955675" elapsed="6.612481"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="SAMPLE" id="s1" pass="1" fail="0" skip="0">SAMPLE</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

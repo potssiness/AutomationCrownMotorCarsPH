@@ -1,121 +1,90 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-25T23:04:22.473810" rpa="false" schemaversion="5">
-<suite id="s1" name="SCRUM6" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\admin\SCRUM6.robot">
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-26T00:05:04.553120" rpa="false" schemaversion="5">
+<suite id="s1" name="SAMPLE" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\customer\SAMPLE.robot">
 <test id="s1-t1" name="Sample Test Case" line="6">
-<kw name="Open Browser To Admin Page" owner="crownMotorsAdminKeywords">
-<kw name="Open Browser To URL" owner="customKeywords">
+<kw name="Open Browser Session" owner="browser">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Headless Browser" owner="browser">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-26T00:05:04.751079" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x000002BC21F48AD0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-26T00:05:04.748780" elapsed="0.002332"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<msg time="2026-02-26T00:05:04.751457" level="FAIL">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--headless'</msg>
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless=new</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="FAIL" start="2026-02-26T00:05:04.751218" elapsed="0.000376">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--headless'</status>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--window-size=1920,1080</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-26T00:05:04.751688" elapsed="0.000018"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-gpu</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-26T00:05:04.751769" elapsed="0.000014"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-26T00:05:04.751837" elapsed="0.000013"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-25T23:04:22.662768" level="INFO">Opening browser 'Chrome' to base url 'https://stage.crownmotorcarsph.com/admin/login'.</msg>
-<msg time="2026-02-25T23:04:22.677537" level="DEBUG">Selenium Manager binary found at: C:\Users\mcapote\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe</msg>
-<msg time="2026-02-25T23:04:22.677779" level="DEBUG">Executing process: C:\Users\mcapote\AppData\Local\Python\pythoncore-3.14-64\Lib\site-packages\selenium\webdriver\common\windows\selenium-manager.exe --browser chrome --debug --language-binding python --output json</msg>
-<msg time="2026-02-25T23:04:22.857665" level="DEBUG">chromedriver not found in PATH</msg>
-<msg time="2026-02-25T23:04:22.857753" level="DEBUG">chrome detected at C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
-<msg time="2026-02-25T23:04:22.857792" level="DEBUG">Detected browser: chrome 145.0.7632.116</msg>
-<msg time="2026-02-25T23:04:22.857821" level="DEBUG">Required driver: chromedriver 145.0.7632.117</msg>
-<msg time="2026-02-25T23:04:22.857849" level="DEBUG">chromedriver 145.0.7632.117 already in the cache</msg>
-<msg time="2026-02-25T23:04:22.857876" level="DEBUG">Driver path: C:\Users\mcapote\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe</msg>
-<msg time="2026-02-25T23:04:22.857901" level="DEBUG">Browser path: C:\Program Files\Google\Chrome\Application\chrome.exe</msg>
-<msg time="2026-02-25T23:04:22.925630" level="DEBUG">Started executable: `C:\Users\mcapote\.cache\selenium\chromedriver\win64\145.0.7632.117\chromedriver.exe` in a child process with pid: 15864 using 0 to output -3</msg>
-<msg time="2026-02-25T23:04:23.494596" level="DEBUG">POST http://localhost:63751/session {'capabilities': {'firstMatch': [{}], 'alwaysMatch': {'browserName': 'chrome', 'pageLoadStrategy': &lt;PageLoadStrategy.normal: 'normal'&gt;, 'browserVersion': None, 'goog:chromeOptions': {'extensions': [], 'binary': 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe', 'args': []}}}}</msg>
-<msg time="2026-02-25T23:04:23.494917" level="DEBUG">Starting new HTTP connection (1): localhost:63751</msg>
-<msg time="2026-02-25T23:04:24.550863" level="DEBUG">http://localhost:63751 "POST /session HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:24.551013" level="DEBUG">Remote response: status=200 | data={"value":{"capabilities":{"acceptInsecureCerts":false,"browserName":"chrome","browserVersion":"145.0.7632.116","chrome":{"chromedriverVersion":"145.0.7632.117 (de4e5d6e13b995f5e04137970c0e8ec456017467-refs/branch-heads/7632@{#3101})","userDataDir":"C:\\Users\\mcapote\\AppData\\Local\\Temp\\scoped_dir15864_1027786983"},"fedcm:accounts":true,"goog:chromeOptions":{"debuggerAddress":"localhost:63754"},"goog:processID":40768,"networkConnectionEnabled":false,"pageLoadStrategy":"normal","platformName":"windows","proxy":{},"setWindowRect":true,"strictFileInteractability":false,"timeouts":{"implicit":0,"pageLoad":300000,"script":30000},"unhandledPromptBehavior":"dismiss and notify","webauthn:extension:credBlob":true,"webauthn:extension:largeBlob":true,"webauthn:extension:minPinLength":true,"webauthn:extension:prf":true,"webauthn:virtualAuthenticators":true},"sessionId":"d13f5a69319353b5233b259f7f84d137"}} | headers=HTTPHeaderDict({'Content-Length': '909', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:24.551091" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:24.551223" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/timeouts {'script': 5000}</msg>
-<msg time="2026-02-25T23:04:24.552192" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:24.552300" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:24.552362" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:24.552450" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/timeouts {'implicit': 0}</msg>
-<msg time="2026-02-25T23:04:24.553704" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:24.553789" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:24.553842" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:24.553918" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/timeouts {'pageLoad': 300000}</msg>
-<msg time="2026-02-25T23:04:24.554636" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:24.554703" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:24.554750" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:24.554823" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/url {'url': 'https://stage.crownmotorcarsph.com/admin/login'}</msg>
-<msg time="2026-02-25T23:04:27.488013" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/url HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.488260" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.488347" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:27.488390" level="DEBUG">Opened browser with session id d13f5a69319353b5233b259f7f84d137.</msg>
-<arg>${url}</arg>
-<arg>${browser}</arg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<arg>options=${options}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-25T23:04:22.662569" elapsed="4.825879"/>
+<status status="NOT RUN" start="2026-02-26T00:05:04.751923" elapsed="0.000015"/>
 </kw>
-<arg>${ADMIN_PAGE_URL}</arg>
+<arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2026-02-25T23:04:22.661895" elapsed="4.826682"/>
+<status status="FAIL" start="2026-02-26T00:05:04.748584" elapsed="0.003428">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--headless'</status>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<msg time="2026-02-25T23:04:27.488888" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/window/maximize {}</msg>
-<msg time="2026-02-25T23:04:27.533879" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/window/maximize HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.534003" level="DEBUG">Remote response: status=200 | data={"value":{"height":832,"width":1552,"x":-7,"y":-7}} | headers=HTTPHeaderDict({'Content-Length': '51', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.534062" level="DEBUG">Finished Request</msg>
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-25T23:04:27.488721" elapsed="0.045411"/>
+<arg>'${HEADLESS}'=='True'</arg>
+<arg>Open Headless Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Normal Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="FAIL" start="2026-02-26T00:05:04.748115" elapsed="0.003934">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--headless'</status>
 </kw>
-<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
-<msg time="2026-02-25T23:04:27.534534" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/timeouts {'script': 10000}</msg>
-<msg time="2026-02-25T23:04:27.535427" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/timeouts HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.535529" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.535585" level="DEBUG">Finished Request</msg>
-<arg>${10_SECONDS}</arg>
-<doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2026-02-25T23:04:27.534282" elapsed="0.001354"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-02-25T23:04:27.536255" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/elements {'using': 'xpath', 'value': '//*[@id="root"]/div[1]/div[1]/div/div/div/div/img'}</msg>
-<msg time="2026-02-25T23:04:27.547494" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.547692" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.B8A18068934DE37493824C9D6688CE03.d.8427035CDD364844FFFA5387A2DC8AE7.e.22"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.547784" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:27.549323" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.B8A18068934DE37493824C9D6688CE03.d.8427035CDD364844FFFA5387A2DC8AE7.e.22'}]}</msg>
-<msg time="2026-02-25T23:04:27.559751" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/execute/sync HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.559940" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.560027" level="DEBUG">Finished Request</msg>
-<arg>${CROWN_MOTORS_ADMIN_LOGO}</arg>
-<arg>timeout=${10_SECONDS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-25T23:04:27.535762" elapsed="0.024418"/>
-</kw>
-<status status="PASS" start="2026-02-25T23:04:22.661488" elapsed="4.898855"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2026-02-25T23:04:27.562163" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/elements {'using': 'xpath', 'value': "//h2[normalize-space(text())='Welcome to Crown Motor Cars, Admin']"}</msg>
-<msg time="2026-02-25T23:04:27.581140" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/elements HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.581349" level="DEBUG">Remote response: status=200 | data={"value":[{"element-6066-11e4-a52e-4f735466cecf":"f.B8A18068934DE37493824C9D6688CE03.d.8427035CDD364844FFFA5387A2DC8AE7.e.23"}]} | headers=HTTPHeaderDict({'Content-Length': '128', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.581460" level="DEBUG">Finished Request</msg>
-<msg time="2026-02-25T23:04:27.581736" level="DEBUG">POST http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137/execute/sync {'script': '/* isDisplayed */return (function(){return (function(){/*\n\n Copyright The Closure Library Authors.\n ...', 'args': [{'element-6066-11e4-a52e-4f735466cecf': 'f.B8A18068934DE37493824C9D6688CE03.d.8427035CDD364844FFFA5387A2DC8AE7.e.23'}]}</msg>
-<msg time="2026-02-25T23:04:27.590028" level="DEBUG">http://localhost:63751 "POST /session/d13f5a69319353b5233b259f7f84d137/execute/sync HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.590186" level="DEBUG">Remote response: status=200 | data={"value":true} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.590258" level="DEBUG">Finished Request</msg>
-<arg>${WELCOME_TEXT}</arg>
-<arg>timeout=${10_SECONDS}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-25T23:04:27.561297" elapsed="0.029049"/>
+<arg>${CUSTOMER_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="FAIL" start="2026-02-26T00:05:04.746963" elapsed="0.005151">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--headless'</status>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
-<msg time="2026-02-25T23:04:27.590978" level="DEBUG">Closing browser with session id d13f5a69319353b5233b259f7f84d137.</msg>
-<msg time="2026-02-25T23:04:27.591089" level="DEBUG">DELETE http://localhost:63751/session/d13f5a69319353b5233b259f7f84d137 {}</msg>
-<msg time="2026-02-25T23:04:27.651915" level="DEBUG">http://localhost:63751 "DELETE /session/d13f5a69319353b5233b259f7f84d137 HTTP/1.1" 200 0</msg>
-<msg time="2026-02-25T23:04:27.652119" level="DEBUG">Remote response: status=200 | data={"value":null} | headers=HTTPHeaderDict({'Content-Length': '14', 'Content-Type': 'application/json; charset=utf-8', 'cache-control': 'no-cache'})</msg>
-<msg time="2026-02-25T23:04:27.652227" level="DEBUG">Finished Request</msg>
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-25T23:04:27.590850" elapsed="2.202302"/>
+<status status="PASS" start="2026-02-26T00:05:04.752764" elapsed="0.000189"/>
 </kw>
 <doc>https://carldagangon00.atlassian.net/browse/SCRUM-6</doc>
-<status status="PASS" start="2026-02-25T23:04:22.660752" elapsed="7.133001"/>
+<status status="FAIL" start="2026-02-26T00:05:04.745791" elapsed="0.007376">Calling method 'add_argument' failed: TypeError: ArgOptions.add_argument() got an unexpected keyword argument '--headless'</status>
 </test>
-<status status="PASS" start="2026-02-25T23:04:22.475826" elapsed="7.319315"/>
+<status status="FAIL" start="2026-02-26T00:05:04.555213" elapsed="0.198454"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="SCRUM6" id="s1" pass="1" fail="0" skip="0">SCRUM6</stat>
+<stat name="SAMPLE" id="s1" pass="0" fail="1" skip="0">SAMPLE</stat>
 </suite>
 </statistics>
 <errors>
