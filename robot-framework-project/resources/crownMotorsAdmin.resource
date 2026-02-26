@@ -12,3 +12,6 @@ ${EMAIL_ADDRESS_FIELD}          (//label[normalize-space(text())='Email Address'
 ${PASSWORD_FIELD}               //input[@type='password']
 ${LOGIN_BUTTON}                 (//button[@name='login']//span)[1]
 ${FORGOT_PASSWORD_LINK}         //button[@name='forgot password']/span[1]/span[1]
+# - Admin dashboard
+${DASHBOARD_HEADING}            //p[normalize-space(text())='Welcome to your Dashboard, Admin!']
+${ADMIN_PROFILE_ICON}           //img[@alt='Crown Motor Cars Logo']

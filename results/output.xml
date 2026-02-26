@@ -1,73 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-25T23:39:31.270039" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-26T13:46:33.979603" rpa="false" schemaversion="5">
 <suite id="s1" name="AutomationCrownMotorCarsPH" source="C:\AutomationCrownMotorCarsPH">
 <suite id="s1-s1" name="Robot-Framework-Project" source="C:\AutomationCrownMotorCarsPH\robot-framework-project">
 <suite id="s1-s1-s1" name="Tests" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests">
-<suite id="s1-s1-s1-s1" name="Customer" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\customer">
-<suite id="s1-s1-s1-s1-s1" name="SAMPLE" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\customer\SAMPLE.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="Sample Test Case" line="6">
-<kw name="Open Browser Session" owner="browser">
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="Open Normal Browser" owner="browser">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-25T23:39:32.824659" level="INFO">Opening browser 'Chrome' to base url 'https://stage.crownmotorcarsph.com/admin/login'.</msg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-25T23:39:32.824427" elapsed="4.864245"/>
+<suite id="s1-s1-s1-s1" name="Admin" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\admin">
+<suite id="s1-s1-s1-s1-s1" name="SCRUM6 AdminSideFeaturesLogin" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\admin\SCRUM6_AdminSideFeaturesLogin.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Valid/invalid credential handling" line="16">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-26T13:46:34.245030" level="INFO">Typing text 'admin@example.com' into text field '(//label[normalize-space(text())='Email Address']/following::input)[1]'.</msg>
+<msg time="2026-02-26T13:46:34.245304" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg time="2026-02-26T13:46:34.245745" level="FAIL">No browser is open.</msg>
+<arg>${EMAIL_ADDRESS_FIELD}</arg>
+<arg>${ADMIN_EMAIL}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-02-26T13:46:34.244502" elapsed="0.012723">No browser is open.</status>
 </kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-25T23:39:37.688950" elapsed="0.046118"/>
+<kw name="Input Password" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${ADMIN_PASSWORD}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-26T13:46:34.257626" elapsed="0.000130"/>
 </kw>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<status status="PASS" start="2026-02-25T23:39:32.824081" elapsed="4.911276"/>
-</kw>
-<arg>'${HEADLESS}'=='True'</arg>
-<arg>Open Headless Browser</arg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<arg>ELSE</arg>
-<arg>Open Normal Browser</arg>
-<arg>${URL}</arg>
-<arg>${BROWSER}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-25T23:39:32.823382" elapsed="4.912108"/>
-</kw>
-<arg>${ADMIN_PAGE_URL}</arg>
-<arg>${BROWSER}</arg>
-<status status="PASS" start="2026-02-25T23:39:32.822504" elapsed="4.913330"/>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-02-26T13:46:34.257946" elapsed="0.000087"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-25T23:39:37.736410" elapsed="2.208942"/>
+<status status="PASS" start="2026-02-26T13:46:34.258340" elapsed="0.000207"/>
 </kw>
 <doc>https://carldagangon00.atlassian.net/browse/SCRUM-6</doc>
-<status status="PASS" start="2026-02-25T23:39:32.807773" elapsed="7.137987"/>
+<status status="FAIL" start="2026-02-26T13:46:34.240159" elapsed="0.018516">No browser is open.</status>
 </test>
-<status status="PASS" start="2026-02-25T23:39:31.327267" elapsed="8.623940"/>
+<status status="FAIL" start="2026-02-26T13:46:34.043249" elapsed="0.220953"/>
 </suite>
-<status status="PASS" start="2026-02-25T23:39:31.324195" elapsed="8.630042"/>
+<status status="FAIL" start="2026-02-26T13:46:34.038488" elapsed="0.229700"/>
 </suite>
-<status status="PASS" start="2026-02-25T23:39:31.320335" elapsed="8.636714"/>
+<status status="FAIL" start="2026-02-26T13:46:34.033502" elapsed="0.239219"/>
 </suite>
-<status status="PASS" start="2026-02-25T23:39:31.313388" elapsed="8.645964"/>
+<status status="FAIL" start="2026-02-26T13:46:34.029017" elapsed="0.247077"/>
 </suite>
-<status status="PASS" start="2026-02-25T23:39:31.274807" elapsed="8.686850"/>
+<status status="FAIL" start="2026-02-26T13:46:33.988601" elapsed="0.290307"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="AutomationCrownMotorCarsPH" id="s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH</stat>
-<stat name="Robot-Framework-Project" id="s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project</stat>
-<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests</stat>
-<stat name="Customer" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Customer</stat>
-<stat name="SAMPLE" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Customer.SAMPLE</stat>
+<stat name="AutomationCrownMotorCarsPH" id="s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH</stat>
+<stat name="Robot-Framework-Project" id="s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project</stat>
+<stat name="Tests" id="s1-s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests</stat>
+<stat name="Admin" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Admin</stat>
+<stat name="SCRUM6 AdminSideFeaturesLogin" id="s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Admin.SCRUM6 AdminSideFeaturesLogin</stat>
 </suite>
 </statistics>
 <errors>
