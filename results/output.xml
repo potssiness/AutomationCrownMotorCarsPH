@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-26T14:26:33.636697" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-26T15:57:32.877679" rpa="false" schemaversion="5">
 <suite id="s1" name="AutomationCrownMotorCarsPH" source="C:\AutomationCrownMotorCarsPH">
 <suite id="s1-s1" name="Robot-Framework-Project" source="C:\AutomationCrownMotorCarsPH\robot-framework-project">
 <suite id="s1-s1-s1" name="Tests" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests">
@@ -11,19 +11,25 @@
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Open Normal Browser" owner="browser">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-02-26T14:26:33.861317" level="INFO">Opening browser 'Chrome' to base url 'https://stage.crownmotorcarsph.com/admin/login'.</msg>
+<msg time="2026-02-26T15:57:33.101178" level="INFO">Opening browser 'Chrome' to base url 'https://stage.crownmotorcarsph.com/admin/login'.</msg>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-02-26T14:26:33.861053" elapsed="5.071899"/>
+<status status="PASS" start="2026-02-26T15:57:33.100915" elapsed="4.815566"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-26T14:26:38.933512" elapsed="0.096893"/>
+<status status="PASS" start="2026-02-26T15:57:37.916838" elapsed="0.078462"/>
+</kw>
+<kw name="Set Window Size" owner="SeleniumLibrary">
+<arg>1920</arg>
+<arg>1080</arg>
+<doc>Sets current windows size to given ``width`` and ``height``.</doc>
+<status status="PASS" start="2026-02-26T15:57:37.995780" elapsed="0.443152"/>
 </kw>
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2026-02-26T14:26:33.860767" elapsed="5.169853"/>
+<status status="PASS" start="2026-02-26T15:57:33.100647" elapsed="5.338816"/>
 </kw>
 <arg>'${HEADLESS}'=='True'</arg>
 <arg>Open Headless Browser</arg>
@@ -34,124 +40,124 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2026-02-26T14:26:33.860248" elapsed="5.170470"/>
+<status status="PASS" start="2026-02-26T15:57:33.100104" elapsed="5.339685"/>
 </kw>
 <arg>${ADMIN_PAGE_URL}</arg>
 <arg>${BROWSER}</arg>
-<status status="PASS" start="2026-02-26T14:26:33.859912" elapsed="5.170919"/>
+<status status="PASS" start="2026-02-26T15:57:33.099744" elapsed="5.340287"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-02-26T14:26:39.031006" elapsed="0.004133"/>
+<status status="PASS" start="2026-02-26T15:57:38.440339" elapsed="0.044502"/>
 </kw>
 <kw name="Set Selenium Timeout" owner="SeleniumLibrary">
 <arg>${10_SECONDS}</arg>
 <doc>Sets the timeout that is used by various keywords.</doc>
-<status status="PASS" start="2026-02-26T14:26:39.035388" elapsed="0.002253"/>
+<status status="PASS" start="2026-02-26T15:57:38.485083" elapsed="0.001145"/>
 </kw>
 <kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
 <arg>${10_SECONDS}</arg>
 <doc>Sets the implicit wait value used by Selenium.</doc>
-<status status="PASS" start="2026-02-26T14:26:39.037926" elapsed="0.001886"/>
+<status status="PASS" start="2026-02-26T15:57:38.486385" elapsed="0.000960"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-02-26T14:26:42.041336" level="INFO">Slept 3 seconds.</msg>
+<msg time="2026-02-26T15:57:41.488199" level="INFO">Slept 3 seconds.</msg>
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-02-26T14:26:39.040244" elapsed="3.002009"/>
+<status status="PASS" start="2026-02-26T15:57:38.487486" elapsed="3.001822"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${CROWN_MOTORS_ADMIN_LOGO}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.042670" elapsed="0.045488"/>
+<status status="PASS" start="2026-02-26T15:57:41.489733" elapsed="0.027089"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${WELCOME_TEXT}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.088423" elapsed="0.020685"/>
+<status status="PASS" start="2026-02-26T15:57:41.517361" elapsed="0.015890"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${EMAIL_ADDRESS_FIELD}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.109575" elapsed="0.021834"/>
+<status status="PASS" start="2026-02-26T15:57:41.533580" elapsed="0.013763"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${PASSWORD_FIELD}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.131919" elapsed="0.027691"/>
+<status status="PASS" start="2026-02-26T15:57:41.547666" elapsed="0.016330"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${LOGIN_BUTTON}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.160137" elapsed="0.023482"/>
+<status status="PASS" start="2026-02-26T15:57:41.564213" elapsed="0.014386"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${FORGOT_PASSWORD_LINK}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.184104" elapsed="0.020438"/>
+<status status="PASS" start="2026-02-26T15:57:41.578950" elapsed="0.013820"/>
 </kw>
-<status status="PASS" start="2026-02-26T14:26:33.858082" elapsed="8.346798"/>
+<status status="PASS" start="2026-02-26T15:57:33.098218" elapsed="8.494728"/>
 </kw>
 <kw name="When Login With Valid Credentials" owner="crownMotorsAdminKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-26T14:26:42.209810" level="INFO">Typing text 'carldagangon00@gmail.com' into text field '(//label[normalize-space(text())='Email Address']/following::input)[1]'.</msg>
+<msg time="2026-02-26T15:57:41.595309" level="INFO">Typing text 'carldagangon00@gmail.com' into text field '(//label[normalize-space(text())='Email Address']/following::input)[1]'.</msg>
 <arg>${EMAIL_ADDRESS_FIELD}</arg>
 <arg>${ADMIN_EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.209324" elapsed="0.208708"/>
+<status status="PASS" start="2026-02-26T15:57:41.595059" elapsed="0.147842"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-26T14:26:42.419133" level="INFO">Typing text 'Crown!26' into text field '//input[@type='password']'.</msg>
+<msg time="2026-02-26T15:57:41.743942" level="INFO">Typing text 'Crown!26' into text field '//input[@type='password']'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${ADMIN_PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.418497" elapsed="0.191299"/>
+<status status="PASS" start="2026-02-26T15:57:41.743319" elapsed="0.083771"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2026-02-26T14:26:42.610959" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<msg time="2026-02-26T15:57:41.827676" level="INFO">Clicking element '//button[@type='submit']'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.610273" elapsed="0.092413"/>
+<status status="PASS" start="2026-02-26T15:57:41.827351" elapsed="0.077541"/>
 </kw>
-<status status="PASS" start="2026-02-26T14:26:42.207121" elapsed="0.495926"/>
+<status status="PASS" start="2026-02-26T15:57:41.594143" elapsed="0.310934"/>
 </kw>
 <kw name="Then Verify Successful Login To Admin Dashboard" owner="crownMotorsAdminKeywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${DASHBOARD_HEADING}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:42.705887" elapsed="4.702093"/>
+<status status="PASS" start="2026-02-26T15:57:41.908245" elapsed="4.557227"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ADMIN_PROFILE_ICON}</arg>
 <arg>timeout=${10_SECONDS}</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2026-02-26T14:26:47.408362" elapsed="0.234438"/>
+<status status="PASS" start="2026-02-26T15:57:46.465687" elapsed="0.667474"/>
 </kw>
-<status status="PASS" start="2026-02-26T14:26:42.705018" elapsed="4.938082"/>
+<status status="PASS" start="2026-02-26T15:57:41.906703" elapsed="5.226628"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-26T14:26:47.644469" elapsed="2.320104"/>
+<status status="PASS" start="2026-02-26T15:57:47.134296" elapsed="2.317041"/>
 </kw>
 <doc>https://carldagangon00.atlassian.net/browse/SCRUM-6</doc>
-<status status="PASS" start="2026-02-26T14:26:33.852811" elapsed="16.112444"/>
+<status status="PASS" start="2026-02-26T15:57:33.093053" elapsed="16.358761"/>
 </test>
-<status status="PASS" start="2026-02-26T14:26:33.684397" elapsed="16.289963"/>
+<status status="PASS" start="2026-02-26T15:57:32.921137" elapsed="16.539005"/>
 </suite>
-<status status="PASS" start="2026-02-26T14:26:33.681535" elapsed="16.295696"/>
+<status status="PASS" start="2026-02-26T15:57:32.918509" elapsed="16.551929"/>
 </suite>
-<status status="PASS" start="2026-02-26T14:26:33.678814" elapsed="16.300779"/>
+<status status="PASS" start="2026-02-26T15:57:32.915607" elapsed="16.559376"/>
 </suite>
-<status status="PASS" start="2026-02-26T14:26:33.675601" elapsed="16.306430"/>
+<status status="PASS" start="2026-02-26T15:57:32.912107" elapsed="16.565674"/>
 </suite>
-<status status="PASS" start="2026-02-26T14:26:33.642123" elapsed="16.347204"/>
+<status status="PASS" start="2026-02-26T15:57:32.882913" elapsed="16.597536"/>
 </suite>
 <statistics>
 <total>

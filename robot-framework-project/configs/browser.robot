@@ -15,6 +15,7 @@ Open Normal Browser
     [Arguments]    ${URL}    ${BROWSER}
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
+    Set Window Size    1920    1080
 
 Open Headless Browser
     [Arguments]    ${URL}    ${BROWSER}
