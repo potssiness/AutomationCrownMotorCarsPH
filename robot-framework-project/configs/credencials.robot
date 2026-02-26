@@ -1,3 +1,3 @@
 *** Variables ***
-${ADMIN_EMAIL}    admin@example.com
-${ADMIN_PASSWORD}    yourpassword
+${ADMIN_EMAIL}    carldagangon00@gmail.com
+${ADMIN_PASSWORD}    Crown!26

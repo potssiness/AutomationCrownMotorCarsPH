@@ -1,60 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-26T13:46:33.979603" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.14.3 on win32)" generated="2026-02-26T14:26:33.636697" rpa="false" schemaversion="5">
 <suite id="s1" name="AutomationCrownMotorCarsPH" source="C:\AutomationCrownMotorCarsPH">
 <suite id="s1-s1" name="Robot-Framework-Project" source="C:\AutomationCrownMotorCarsPH\robot-framework-project">
 <suite id="s1-s1-s1" name="Tests" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests">
 <suite id="s1-s1-s1-s1" name="Admin" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\admin">
 <suite id="s1-s1-s1-s1-s1" name="SCRUM6 AdminSideFeaturesLogin" source="C:\AutomationCrownMotorCarsPH\robot-framework-project\tests\admin\SCRUM6_AdminSideFeaturesLogin.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="Valid/invalid credential handling" line="16">
+<test id="s1-s1-s1-s1-s1-t1" name="Validate Screen Elements on Admin Login Page and Login Functionality" line="6">
+<kw name="Given Open Browser To Admin Page" owner="crownMotorsAdminKeywords">
+<kw name="Open Browser Session" owner="browser">
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Open Normal Browser" owner="browser">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-26T14:26:33.861317" level="INFO">Opening browser 'Chrome' to base url 'https://stage.crownmotorcarsph.com/admin/login'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-26T14:26:33.861053" elapsed="5.071899"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-26T14:26:38.933512" elapsed="0.096893"/>
+</kw>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2026-02-26T14:26:33.860767" elapsed="5.169853"/>
+</kw>
+<arg>'${HEADLESS}'=='True'</arg>
+<arg>Open Headless Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>ELSE</arg>
+<arg>Open Normal Browser</arg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-26T14:26:33.860248" elapsed="5.170470"/>
+</kw>
+<arg>${ADMIN_PAGE_URL}</arg>
+<arg>${BROWSER}</arg>
+<status status="PASS" start="2026-02-26T14:26:33.859912" elapsed="5.170919"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-26T14:26:39.031006" elapsed="0.004133"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>${10_SECONDS}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" start="2026-02-26T14:26:39.035388" elapsed="0.002253"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>${10_SECONDS}</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="PASS" start="2026-02-26T14:26:39.037926" elapsed="0.001886"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-02-26T14:26:42.041336" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-02-26T14:26:39.040244" elapsed="3.002009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CROWN_MOTORS_ADMIN_LOGO}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.042670" elapsed="0.045488"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${WELCOME_TEXT}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.088423" elapsed="0.020685"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${EMAIL_ADDRESS_FIELD}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.109575" elapsed="0.021834"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.131919" elapsed="0.027691"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LOGIN_BUTTON}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.160137" elapsed="0.023482"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FORGOT_PASSWORD_LINK}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.184104" elapsed="0.020438"/>
+</kw>
+<status status="PASS" start="2026-02-26T14:26:33.858082" elapsed="8.346798"/>
+</kw>
+<kw name="When Login With Valid Credentials" owner="crownMotorsAdminKeywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-02-26T13:46:34.245030" level="INFO">Typing text 'admin@example.com' into text field '(//label[normalize-space(text())='Email Address']/following::input)[1]'.</msg>
-<msg time="2026-02-26T13:46:34.245304" level="INFO">Cannot capture screenshot because no browser is open.</msg>
-<msg time="2026-02-26T13:46:34.245745" level="FAIL">No browser is open.</msg>
+<msg time="2026-02-26T14:26:42.209810" level="INFO">Typing text 'carldagangon00@gmail.com' into text field '(//label[normalize-space(text())='Email Address']/following::input)[1]'.</msg>
 <arg>${EMAIL_ADDRESS_FIELD}</arg>
 <arg>${ADMIN_EMAIL}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="FAIL" start="2026-02-26T13:46:34.244502" elapsed="0.012723">No browser is open.</status>
+<status status="PASS" start="2026-02-26T14:26:42.209324" elapsed="0.208708"/>
 </kw>
-<kw name="Input Password" owner="SeleniumLibrary">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-26T14:26:42.419133" level="INFO">Typing text 'Crown!26' into text field '//input[@type='password']'.</msg>
 <arg>${PASSWORD_FIELD}</arg>
 <arg>${ADMIN_PASSWORD}</arg>
-<doc>Types the given password into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-02-26T13:46:34.257626" elapsed="0.000130"/>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.418497" elapsed="0.191299"/>
 </kw>
-<kw name="Click Button" owner="SeleniumLibrary">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-26T14:26:42.610959" level="INFO">Clicking element '//button[@type='submit']'.</msg>
 <arg>${LOGIN_BUTTON}</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="NOT RUN" start="2026-02-26T13:46:34.257946" elapsed="0.000087"/>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.610273" elapsed="0.092413"/>
+</kw>
+<status status="PASS" start="2026-02-26T14:26:42.207121" elapsed="0.495926"/>
+</kw>
+<kw name="Then Verify Successful Login To Admin Dashboard" owner="crownMotorsAdminKeywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${DASHBOARD_HEADING}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:42.705887" elapsed="4.702093"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${ADMIN_PROFILE_ICON}</arg>
+<arg>timeout=${10_SECONDS}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-02-26T14:26:47.408362" elapsed="0.234438"/>
+</kw>
+<status status="PASS" start="2026-02-26T14:26:42.705018" elapsed="4.938082"/>
 </kw>
 <kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-02-26T13:46:34.258340" elapsed="0.000207"/>
+<status status="PASS" start="2026-02-26T14:26:47.644469" elapsed="2.320104"/>
 </kw>
 <doc>https://carldagangon00.atlassian.net/browse/SCRUM-6</doc>
-<status status="FAIL" start="2026-02-26T13:46:34.240159" elapsed="0.018516">No browser is open.</status>
+<status status="PASS" start="2026-02-26T14:26:33.852811" elapsed="16.112444"/>
 </test>
-<status status="FAIL" start="2026-02-26T13:46:34.043249" elapsed="0.220953"/>
+<status status="PASS" start="2026-02-26T14:26:33.684397" elapsed="16.289963"/>
 </suite>
-<status status="FAIL" start="2026-02-26T13:46:34.038488" elapsed="0.229700"/>
+<status status="PASS" start="2026-02-26T14:26:33.681535" elapsed="16.295696"/>
 </suite>
-<status status="FAIL" start="2026-02-26T13:46:34.033502" elapsed="0.239219"/>
+<status status="PASS" start="2026-02-26T14:26:33.678814" elapsed="16.300779"/>
 </suite>
-<status status="FAIL" start="2026-02-26T13:46:34.029017" elapsed="0.247077"/>
+<status status="PASS" start="2026-02-26T14:26:33.675601" elapsed="16.306430"/>
 </suite>
-<status status="FAIL" start="2026-02-26T13:46:33.988601" elapsed="0.290307"/>
+<status status="PASS" start="2026-02-26T14:26:33.642123" elapsed="16.347204"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="AutomationCrownMotorCarsPH" id="s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH</stat>
-<stat name="Robot-Framework-Project" id="s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project</stat>
-<stat name="Tests" id="s1-s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests</stat>
-<stat name="Admin" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Admin</stat>
-<stat name="SCRUM6 AdminSideFeaturesLogin" id="s1-s1-s1-s1-s1" pass="0" fail="1" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Admin.SCRUM6 AdminSideFeaturesLogin</stat>
+<stat name="AutomationCrownMotorCarsPH" id="s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH</stat>
+<stat name="Robot-Framework-Project" id="s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project</stat>
+<stat name="Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests</stat>
+<stat name="Admin" id="s1-s1-s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Admin</stat>
+<stat name="SCRUM6 AdminSideFeaturesLogin" id="s1-s1-s1-s1-s1" pass="1" fail="0" skip="0">AutomationCrownMotorCarsPH.Robot-Framework-Project.Tests.Admin.SCRUM6 AdminSideFeaturesLogin</stat>
 </suite>
 </statistics>
 <errors>

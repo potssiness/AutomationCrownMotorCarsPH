@@ -9,6 +9,7 @@ ${BROWSER}     Chrome
 # Timeouts (units: seconds)
 # - Use descriptive names and keep units in comments
 # - `10_SECONDS` kept for backwards compatibility; prefer `DEFAULT_TIMEOUT`
+${05_SECONDS}     5
 ${10_SECONDS}     10
 ${DEFAULT_TIMEOUT}    ${10_SECONDS}    # integer seconds, used for explicit waits
 

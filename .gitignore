@@ -1,5 +1,6 @@
 # Credentials
 robot-framework-project/configs/credencials.py
+robot-framework-project/configs/credencials.robot
 
 # Python
 __pycache__/
