@@ -7,7 +7,7 @@ Open Browser To Admin Page
     Maximize Browser Window
     Set Selenium Timeout             ${10_SECONDS}
     Set Selenium Implicit Wait       ${10_SECONDS}
-    Sleep    3s  # Allow time for the page to load before checking elements
+    Sleep    5s  # Allow time for the page to load before checking elements
     Wait Until Element Is Visible    ${CROWN_MOTORS_ADMIN_LOGO}   timeout=${10_SECONDS}
     Wait Until Element Is Visible    ${WELCOME_TEXT}   timeout=${10_SECONDS}
     Wait Until Element Is Visible    ${EMAIL_ADDRESS_FIELD}   timeout=${10_SECONDS}
