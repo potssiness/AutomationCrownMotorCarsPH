@@ -1,0 +1,3 @@
+*** Variables ***
+${ADMIN_EMAIL}    admin@example.com
+${ADMIN_PASSWORD}    yourpassword

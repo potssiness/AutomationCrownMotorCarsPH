@@ -1,0 +1,28 @@
+# Credentials
+robot-framework-project/configs/credencials.py
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.so
+*.egg
+*.egg-info/
+
+# Robot Framework
+log.html
+report.html
+output.xml
+selenium-screenshot-*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
