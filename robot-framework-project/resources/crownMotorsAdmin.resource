@@ -12,7 +12,10 @@ ${EMAIL_ADDRESS_FIELD}          (//label[normalize-space(text())='Email Address'
 ${PASSWORD_FIELD}               //input[@type='password']
 ${LOGIN_BUTTON}                 //button[@type='submit']
 ${FORGOT_PASSWORD_LINK}         //button[contains(.,'Forgot Password?')]
+${INVALID_CREDENTIALS_ERROR}    //p[normalize-space(text())='Invalid login credentials']
                                 
 # - Admin dashboard
 ${DASHBOARD_HEADING}            //p[normalize-space(text())='Welcome to your Dashboard, Admin!']
 ${ADMIN_PROFILE_ICON}           //img[@alt='Crown Motor Cars Logo']
+${LOGOUT_BUTTON}                //button[normalize-space(text())='Logout']
+${HUMBURGER_MENU}               //div[contains(@class,'flex items-center')]//button[1]
