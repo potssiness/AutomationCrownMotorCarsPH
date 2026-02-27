@@ -1,5 +1,5 @@
 *** Settings ***
-Resource   ../configs/settingsAndResource.resource
+Resource   ../configs/settingsAndResource.robot
 
 *** Variables ***
 ${HEADLESS}    False

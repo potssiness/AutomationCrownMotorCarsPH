@@ -1,8 +1,8 @@
 *** Settings ***
-Resource    ../configs/settingsAndResource.resource
+Resource    ../configs/settingsAndResource.robot
 
 *** Keywords ***
-Open Browser To Admin Page
+Login To Admin
     Open Browser Session             ${ADMIN_PAGE_URL}    ${BROWSER}
     Maximize Browser Window
     Set Selenium Timeout             ${10_SECONDS}
@@ -35,3 +35,8 @@ Logout From Admin Dashboard
     #Click Element    ${HUMBURGER_MENU}
     Sleep    2s  # Allow time for the menu to open
     Click Element    ${LOGOUT_BUTTON}
+
+Access with specific URL of Admin Dashboard
+    Go To    ${ADMIN_DASHBOARD_URL}  
+    Sleep    2s  # Allow time for the page to load
+    Wait Until Element Is Not Visible    ${DASHBOARD_HEADING}    timeout=${10_SECONDS}

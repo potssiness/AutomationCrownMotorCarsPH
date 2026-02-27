@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../configs/settingsAndResource.resource
+Resource    ../configs/settingsAndResource.robot
 
 *** Keywords ***
 Open Browser To URL
