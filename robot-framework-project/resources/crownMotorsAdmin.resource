@@ -13,7 +13,7 @@ ${EMAIL_ADDRESS_FIELD}          (//label[normalize-space(text())='Email Address'
 ${PASSWORD_FIELD}               //input[@type='password']
 ${LOGIN_BUTTON}                 //button[@type='submit']
 ${FORGOT_PASSWORD_LINK}         //button[contains(.,'Forgot Password?')]
-${INVALID_CREDENTIALS_ERROR}    //p[normalize-space(text())='Invalid login credentials']
+${INVALID_CREDENTIALS_ERROR}    //p[normalize-space(text())='Invalid login credentials'] 
                                 
 # - Admin dashboard
 ${DASHBOARD_HEADING}            //p[normalize-space(text())='Welcome to your Dashboard, Admin!']
