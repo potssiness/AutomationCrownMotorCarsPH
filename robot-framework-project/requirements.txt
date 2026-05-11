@@ -1,2 +1,3 @@
 RobotFramework==4.0.3
 Selenium==4.1.0
+robotframework-browser

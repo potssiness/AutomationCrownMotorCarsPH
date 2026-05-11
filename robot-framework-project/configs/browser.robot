@@ -13,15 +13,11 @@ Open Browser Session
     
 Open Normal Browser
     [Arguments]    ${URL}    ${BROWSER}
-    Open Browser    ${URL}    ${BROWSER}
-    Maximize Browser Window
-    Set Window Size    1920    1080
+    New Browser    ${BROWSER}    headless=False
+    New Page    ${URL}
+    Set Viewport Size    1920    1080
 
 Open Headless Browser
     [Arguments]    ${URL}    ${BROWSER}
-    ${options}=    Evaluate    sys.modules['selenium.webdriver'].ChromeOptions()    sys, selenium.webdriver
-    Call Method    ${options}    add_argument    --headless
-    Call Method    ${options}    add_argument    --window-size\=1920,1080
-    Call Method    ${options}    add_argument    --disable-gpu
-    Call Method    ${options}    add_argument    --no-sandbox
-    Open Browser    ${URL}    ${BROWSER}        options=${options}
+    New Browser    ${BROWSER}    headless=True
+    New Page    ${URL}

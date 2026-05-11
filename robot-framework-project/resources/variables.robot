@@ -1,10 +1,10 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    Browser
 
 *** Variables ***
 # Browser settings
 # - Chosen browser for UI tests; CI can override via command-line
-${BROWSER}     Chrome
+${BROWSER}     chromium
 
 # Timeouts (units: seconds)
 # - Use descriptive names and keep units in comments
