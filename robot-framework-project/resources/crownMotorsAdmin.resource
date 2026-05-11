@@ -1,5 +1,5 @@
 *** Settings ***
-Library    SeleniumLibrary
+Library    Browser
 Resource   variables.robot
 
 *** Variables ***
@@ -13,9 +13,9 @@ ${EMAIL_ADDRESS_FIELD}          (//label[normalize-space(text())='Email Address'
 ${PASSWORD_FIELD}               //input[@type='password']
 ${LOGIN_BUTTON}                 //button[@type='submit']
 ${FORGOT_PASSWORD_LINK}         //button[contains(.,'Forgot Password?')]
-${INVALID_CREDENTIALS_ERROR}    //p[normalize-space(text())='Invalid login credentials'] 
+${INVALID_CREDENTIALS_ERROR}    //p[normalize-space(text())='Invalid login credentials']
 ${LOADING_SPINNER}              //div[@data-headlessui-state="open"]
-                                
+
 # - Admin dashboard
 ${DASHBOARD_HEADING}            //p[normalize-space(text())='Welcome to your Dashboard, Admin!']
 ${ADMIN_PROFILE_ICON}           //img[@alt='Crown Motor Cars Logo']

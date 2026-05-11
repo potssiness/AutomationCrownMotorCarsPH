@@ -1,12 +1,13 @@
-def open_browser(url):
-    from selenium import webdriver
-    driver = webdriver.Chrome()
-    driver.get(url)
-    return driver
+# Custom Python library for Robot Framework
+# Add project-specific utility functions here as needed.
+#
+# Example usage in .robot files:
+#   Library    ../libs/custom_lib.py
+#
+# Then call functions as keywords:
+#   ${result}=    My Custom Keyword    arg1    arg2
 
-def click_element(driver, locator):
-    element = driver.find_element(*locator)
-    element.click()
 
-def close_browser(driver):
-    driver.quit()
+def placeholder():
+    """Placeholder function. Replace with actual utilities as needed."""
+    pass

@@ -1,16 +1,15 @@
 *** Settings ***
-Resource   ../configs/settingsAndResource.robot
+Library    Browser
 
 *** Variables ***
 ${HEADLESS}    False
-
 
 *** Keywords ***
 Open Browser Session
     [Arguments]        ${URL}     ${BROWSER}
     Run Keyword If    '${HEADLESS}'=='True'    Open Headless Browser      ${URL}      ${BROWSER}
     ...    ELSE    Open Normal Browser  ${URL}    ${BROWSER}
-    
+
 Open Normal Browser
     [Arguments]    ${URL}    ${BROWSER}
     New Browser    ${BROWSER}    headless=False

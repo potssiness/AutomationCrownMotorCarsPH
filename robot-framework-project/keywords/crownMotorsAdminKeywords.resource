@@ -1,9 +1,6 @@
 *** Settings ***
 Resource    ../configs/settingsAndResource.robot
 
-*** Settings ***
-Resource    ../configs/settingsAndResource.robot
-
 *** Keywords ***
 # Opens admin login page and waits for all login elements to be ready
 Wait For Login Page Elements
@@ -46,5 +43,5 @@ Logout From Admin Dashboard
 
 # Security test: Verifies dashboard is not accessible after logout
 Verify Dashboard Inaccessible After Logout
-    GoTo    ${ADMIN_DASHBOARD_URL}
+    Go To    ${ADMIN_DASHBOARD_URL}
     Wait For Elements State    ${CROWN_MOTORS_ADMIN_LOGO}    visible    timeout=${10_SECONDS}

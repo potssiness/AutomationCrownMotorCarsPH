@@ -1,6 +1,6 @@
-# Credentials
-robot-framework-project/configs/credencials.py
+# Credentials - NEVER commit real credentials
 robot-framework-project/configs/credencials.robot
+robot-framework-project/configs/credencials.py
 
 # Python
 __pycache__/
@@ -11,19 +11,18 @@ __pycache__/
 *.so
 *.egg
 *.egg-info/
+.venv/
 
-# Robot Framework
+# Robot Framework output
 log.html
 report.html
 output.xml
 selenium-screenshot-*.png
+robotframework-browser-screenshot-*.png
 screenshots/
 results/
-*.png
-*.jpg
-*.jpeg
-*.gif
-*.bmp
+browser/screenshot/
+playwright-log.txt
 
 # IDE
 .vscode/
